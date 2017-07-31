@@ -85,6 +85,8 @@ echo "          [4]Cauldron服务器选项"
 echo "          [5]退出服务器"
 echo "          [6]软件说明书"
 echo "          [7]更新日志"
+echo "          [8]下载更新"
+echo "          [9]小游戏 俄罗斯方块"
 echo
 read -p "请输入:" cmd
 	case $cmd in
@@ -233,18 +235,32 @@ do
         ;;
 
 		
-5 )
-	break
-    ;;
-6 )
-	vim Readme.txt
-    ;;
-7 )
-	vim 更新日志.txt
-;;
+			5 )
+				break
+			    ;;
+			6 )
+				vim Readme.txt
+			    ;;
+			7 )
+				vim 更新日志.txt
+			;;
+			8 )
+				echo "[Cube]下载更新方法：按回车键，然后在Cube for Linux文件夹里可以找到cubemc文件夹，里面的Cube for Linux.sh便是更新文件"				
+				read -n1
+				git clone https://github.com/HenryKingChina/cubemc.git
+				
+				
+			;;
+			 9 )
+		./game.sh
+ 
 
  
-	esac
+ 
+
+			;;
+		 
+esac
 done
 echo
 echo
